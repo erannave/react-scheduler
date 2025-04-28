@@ -1,11 +1,14 @@
 import { useCallback, useMemo, useState } from "react";
 import dayjs from "dayjs";
+import { StyleSheetManager } from "styled-components";
 import { createMockData } from "./mock/appMock";
 import { ParsedDatesRange } from "./utils/getDatesRange";
 import { ConfigFormValues, SchedulerProjectData } from "./types/global";
 import ConfigPanel from "./components/ConfigPanel";
 import { StyledSchedulerFrame } from "./styles";
 import { Scheduler } from ".";
+import { ComponentType } from "react";
+import isPropValid from "@emotion/is-prop-valid";
 
 function App() {
   const [values, setValues] = useState<ConfigFormValues>({
@@ -56,7 +59,7 @@ function App() {
     );
 
   return (
-    <>
+    <StyleSheetManager shouldForwardProp={shouldForwardProp}>
       <ConfigPanel values={values} onSubmit={setValues} />
       {isFullscreen ? (
         <Scheduler
@@ -82,8 +85,22 @@ function App() {
           />
         </StyledSchedulerFrame>
       )}
-    </>
+    </StyleSheetManager>
   );
 }
 
 export default App;
+
+// This implements the default behavior from styled-components v5
+interface ShouldForwardProp {
+  (propName: string, target: string | ComponentType<any>): boolean;
+}
+
+const shouldForwardProp: ShouldForwardProp = (propName, target) => {
+  if (typeof target === "string") {
+    // For HTML elements, forward the prop if it is a valid HTML attribute
+    return isPropValid(propName);
+  }
+  // For other elements, forward all props
+  return true;
+};
