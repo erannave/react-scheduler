@@ -42,7 +42,7 @@ const ConfigPanel: FC<ConfigPanelProps> = ({ values, onSubmit }) => {
   };
 
   return (
-    <StyledWrapper onMouseLeave={() => setIsExpanded(false)} isExpanded={isExpanded}>
+    <StyledWrapper onMouseLeave={() => setIsExpanded(false)} $isExpanded={isExpanded}>
       <StyledForm onSubmit={handleSubmit}>
         <StyledInnerWrapper>
           <StyledLabel htmlFor={formFieldsIds.peopleCount}>People count: </StyledLabel>
