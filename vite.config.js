@@ -36,7 +36,8 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, "src/index.ts"),
       name: "react-scheduler",
-      fileName: "index"
+      fileName: "index",
+      cssFileName: "style"
     },
     rollupOptions: {
       external: ["react", "react-dom", "react/jsx-runtime"],
