@@ -618,15 +618,15 @@
   dependencies:
     undici-types "~7.19.0"
 
-"@types/react-dom@19.2.3":
+"@types/react-dom@^19.2.3":
   version "19.2.3"
   resolved "https://registry.npmjs.org/@types/react-dom/-/react-dom-19.2.3.tgz"
   integrity sha512-jp2L/eY6fn+KgVVQAOqYItbF0VY/YApe5Mz2F0aykSO8gx31bYCZyvSeYxCHKvzHG5eZjc+zyaS5BrBWya2+kQ==
 
-"@types/react@*", "@types/react@^19.2.0", "@types/react@19.2.14":
-  version "19.2.14"
-  resolved "https://registry.npmjs.org/@types/react/-/react-19.2.14.tgz"
-  integrity sha512-ilcTH/UniCkMdtexkoCN0bI7pMcJDvmQFPvuPvmEaYA/NSfFTAgdUSLAoVjaRJm7+6PvcM+q1zYOwS4wTYMF9w==
+"@types/react@*", "@types/react@^19.2.0", "@types/react@^19.2.17":
+  version "19.2.17"
+  resolved "https://registry.npmjs.org/@types/react/-/react-19.2.17.tgz"
+  integrity sha512-MXfmqaVPEVgkBT/aY0aGCkRWWtByiYQXo3xdQ8r5RzuFrPiRn8Gar2tQdXSUQ2GKV3bkXckek89V8wQBY2Q/Aw==
   dependencies:
     csstype "^3.2.2"
 
@@ -2914,10 +2914,10 @@ quansync@^0.2.8:
   resolved "https://registry.npmjs.org/quansync/-/quansync-0.2.10.tgz"
   integrity sha512-t41VRkMYbkHyCYmOvx/6URnN80H7k4X0lLdBMGsz+maAwrJQYB1djpV6vHrQIBE0WBSGqhtEHrK9U3DWWH8v7A==
 
-"react-dom@>= 16.8.0", react-dom@19.2.5:
-  version "19.2.5"
-  resolved "https://registry.npmjs.org/react-dom/-/react-dom-19.2.5.tgz"
-  integrity sha512-J5bAZz+DXMMwW/wV3xzKke59Af6CHY7G4uYLN1OvBcKEsWOs4pQExj86BBKamxl/Ik5bx9whOrvBlSDfWzgSag==
+react-dom@^19.2.7, "react-dom@>= 16.8.0":
+  version "19.2.7"
+  resolved "https://registry.npmjs.org/react-dom/-/react-dom-19.2.7.tgz"
+  integrity sha512-t0BRVXvbiE/o20Hfw669rLbMCDWtYZLvmJigy2f0MxsXF+71pxhR3xOkspmsO8h3ZlNzyibAmtCa3l4lYKk6gQ==
   dependencies:
     scheduler "^0.27.0"
 
@@ -2931,10 +2931,10 @@ react-refresh@^0.18.0:
   resolved "https://registry.npmjs.org/react-refresh/-/react-refresh-0.18.0.tgz"
   integrity sha512-QgT5//D3jfjJb6Gsjxv0Slpj23ip+HtOpnNgnb2S5zU3CB26G/IDPGoy4RJB42wzFE46DRsstbW6tKHoKbhAxw==
 
-react@^19.2.5, "react@>= 16.8.0", react@19.2.5:
-  version "19.2.5"
-  resolved "https://registry.npmjs.org/react/-/react-19.2.5.tgz"
-  integrity sha512-llUJLzz1zTUBrskt2pwZgLq59AemifIftw4aB7JxOqf1HY2FDaGDxgwpAPVzHU1kdWabH7FauP4i1oEeer2WCA==
+react@^19.2.7, "react@>= 16.8.0":
+  version "19.2.7"
+  resolved "https://registry.npmjs.org/react/-/react-19.2.7.tgz"
+  integrity sha512-HNe9WslTbXmFK8o8cmwgAeJFSBvt1bPdHCVKtaaV+WlAN36mpT4hcRpwbf3fY56ar2oIXzsBpOAiIRHAdY0OlQ==
 
 reflect.getprototypeof@^1.0.6, reflect.getprototypeof@^1.0.9:
   version "1.0.10"
