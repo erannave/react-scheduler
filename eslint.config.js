@@ -9,7 +9,7 @@ import parserTypescript from "@typescript-eslint/parser";
 
 export default [
   {
-    ignores: ["dist"]
+    ignores: ["dist", "vite.config.js", "vite.config.d.ts"]
   },
   {
     languageOptions: {

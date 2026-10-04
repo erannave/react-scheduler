@@ -15,6 +15,10 @@ To set up the project locally for development and testing, please follow these s
 3. Start the development server: `yarn dev`.
 4. Open http://localhost:5173 in your web browser.
 
+### Unit tests
+
+Run `npm test` (or `yarn test`) to test the pure timeline week-label calculation. The tests use Node's built-in test runner and TypeScript stripping, which require Node 22.6 or newer.
+
 ### Project structure
 
 #### General:
