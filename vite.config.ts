@@ -2,31 +2,27 @@
 import { resolve } from "path";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import babel from "@rolldown/plugin-babel";
 import dts from "vite-plugin-dts";
 import { visualizer } from "rollup-plugin-visualizer";
 import svgr from "vite-plugin-svgr";
 
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   resolve: {
     alias: {
-      "@": resolve(__dirname, "./src")
+      "@": resolve(import.meta.dirname, "./src")
     }
   },
   plugins: [
-    react({
-      babel: {
-        env: {
-          production: {
-            plugins: [["babel-plugin-styled-components", { displayName: false, pure: true }]]
-          },
-          development: {
-            plugins: [["babel-plugin-styled-components", { displayName: true, pure: true }]]
-          }
-        }
-      }
+    react(),
+    babel({
+      plugins: [
+        ["babel-plugin-styled-components", { displayName: mode !== "production", pure: true }]
+      ]
     }),
     dts({
-      rollupTypes: true
+      bundleTypes: true,
+      tsconfigPath: "./tsconfig.json"
     }),
     svgr(),
     visualizer({
@@ -35,7 +31,7 @@ export default defineConfig({
   ],
   build: {
     lib: {
-      entry: resolve(__dirname, "src/index.ts"),
+      entry: resolve(import.meta.dirname, "src/index.ts"),
       name: "react-scheduler",
       fileName: "index"
     },
@@ -53,4 +49,4 @@ export default defineConfig({
   server: {
     host: "0.0.0.0"
   }
-});
+}));
